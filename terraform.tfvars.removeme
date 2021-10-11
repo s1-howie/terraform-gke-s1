@@ -1,0 +1,31 @@
+# THE FOLLOWING VARIABLES MUST BE CUSTOMIZED FOR YOUR GOOGLE CLOUD ENVIRONMENT!!!
+
+project_id = "s1-demo"      # gcloud config get-value project
+region     = "us-east1"     # gcloud config get-value compute/region    # VPC error if us-east1-b is specified
+zone       = "us-east1-b"
+# NOTE:
+# If you specify a zone (such as us-central1-a), the cluster will be a zonal cluster with a single cluster master. 
+# If you specify a region (such as us-west1), the cluster will be a regional cluster with multiple masters spread 
+# across zones in the region, and with default node locations in those zones as well
+
+
+# THE FOLLOWING S1-RELATED VARIABLES MUST BE CUSTOMIZED FOR YOUR S1 DEPLOYMENT!!!
+s1_site_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=="
+docker_server                  = "xxxxx.azurecr.io"
+docker_username                = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+docker_password                = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+s1_helper_image_repository     = "xxxxx.azurecr.io/s1helper"
+s1_agent_image_repository      = "xxxxx.azurecr.io/s1agent"
+
+# The following GCP/GKE-related variables can be left as is or be customized as you see fit.
+cluster_name = "gke-s1-demo"
+node_count   = "2"              # The number of worker nodes to allocate for the GKE cluster
+machine_type = "n1-standard-1"  # https://https://cloud.google.com/compute/docs/machine-types
+
+# The following S1-related variables can be left as is or be customized as you see fit.
+s1_repository_pull_secret_name = "s1-repo-pull-secret"
+s1_helper_image_tag            = "ga-21.7.3" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
+s1_agent_image_tag             = "ga-21.7.3" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
+helm_chart_version             = "21.7.3"
+s1_namespace                   = "sentinelone"
+helm_release_name              = "s1"
