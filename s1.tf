@@ -85,6 +85,40 @@ resource "helm_release" "sentinelone" {
     name  = "agent.nodeSelector\\.kubernetes.io/os'"
     value = "linux"
   }
+  set {
+    name  = "agent.resources.limits.cpu"
+    value = var.agent_resources_limits_cpu
+  }
+  set {
+    name  = "agent.resources.limits.memory"
+    value = var.agent_resources_limits_memory
+  }
+  set {
+    name  = "helper.resources.limits.cpu"
+    value = var.helper_resources_limits_cpu
+  }
+  set {
+    name  = "helper.resources.limits.memory"
+    value = var.helper_resources_limits_memory
+  }
+
+
+  set {
+    name  = "agent.resources.requests.cpu"
+    value = var.agent_resources_requests_cpu
+  }
+  set {
+    name  = "agent.resources.requests.memory"
+    value = var.agent_resources_requests_memory
+  }
+  set {
+    name  = "helper.resources.requests.cpu"
+    value = var.helper_resources_requests_cpu
+  }
+  set {
+    name  = "helper.resources.requests.memory"
+    value = var.helper_resources_requests_memory
+  }
 
   depends_on = [kubernetes_namespace.s1, kubernetes_secret.s1]
 }

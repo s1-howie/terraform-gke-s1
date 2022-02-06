@@ -1,6 +1,6 @@
 # GKE cluster
 resource "google_container_cluster" "primary" {
-  name     = var.cluster_name #"${var.project_id}-gke"
+  name     = var.cluster_name
   location = var.zone
 
   # We can't create a cluster with no node pool defined, but we want to only use
@@ -30,7 +30,7 @@ resource "google_container_node_pool" "primary_nodes" {
       env = var.project_id
     }
 
-    machine_type = "n1-standard-1"
+    machine_type = var.machine_type
     tags         = ["gke-node", "${var.project_id}-gke"]
     metadata = {
       disable-legacy-endpoints = "true"
