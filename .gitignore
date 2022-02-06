@@ -30,3 +30,6 @@ override.tf.json
 
 terraform.tfvars
 .terraform.lock.hcl
+
+# Ignore TODO.txt
+TODO.txt
