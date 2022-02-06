@@ -29,7 +29,7 @@ variable "node_count" {
 
 variable "machine_type" {
   description = "Compute Engine Machine Type to use for the K8s worker nodes."
-  default     = "n1-standard-1"
+  default     = "n2-standard-2"
 }
 
 variable "s1_repository_pull_secret_name" {
