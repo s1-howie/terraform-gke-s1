@@ -32,7 +32,7 @@ brew update && brew install --cask google-cloud-sdk
 brew update && brew install git terraform kubernetes-cli helm 
 ```
 
-# Setting up terraform to communicate with AWS
+# Setting up terraform to communicate with GCP
 After you've installed the gcloud SDK, initialize it by running "gcloud init".
 
 This will authorize the SDK to access GCP using your user account credentials and add the SDK to your PATH. This steps requires you to login and select the project you want to work in.

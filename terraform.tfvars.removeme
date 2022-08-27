@@ -24,9 +24,9 @@ machine_type = "n1-standard-1"  # https://https://cloud.google.com/compute/docs/
 
 # The following S1-related variables can be left as is or be customized as you see fit.
 s1_repository_pull_secret_name = "s1-repo-pull-secret"
-s1_helper_image_tag            = "ga-21.7.3" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
-s1_agent_image_tag             = "ga-21.7.3" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
-helm_chart_version             = "21.7.3"
+s1_helper_image_tag            = "ea-22.2.2" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
+s1_agent_image_tag             = "ea-22.2.2" # Check for latest versions:  https://support.sentinelone.com/hc/en-us/articles/115004361149-Latest-Information
+helm_chart_version             = "22.2.2"
 s1_namespace                   = "sentinelone"
 helm_release_name              = "s1"
 agent_resources_requests_cpu     = "500m"
