@@ -15,7 +15,7 @@ The template has a local-exec provisioner that will take care of setting the Kub
 
 # GCP/GKE Pre-Requisites
 - A [GCP account](https://console.cloud.google.com/) 
-- A configured gcloud SDK
+- A configured gcloud SDK (gcloud CLI utility)
 - kubectl
 
 

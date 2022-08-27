@@ -4,7 +4,6 @@ resource "null_resource" "local_mac_provisioner" {
   provisioner "local-exec" {
     command = <<EOT
         echo "# Running local provisioner to add Kubernetes context"
-        #export KUBECONFIG=./gke-kubeconfig
         gcloud container clusters get-credentials ${google_container_cluster.primary.name} --region ${var.zone}
         EOT
   }
